@@ -11,7 +11,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (error, client )=> {
      return console.log('unable to connect'); 
 }
 
- db.collection('User').findOneAndUpdate({_id: new ObjectID('5b4602f4a8face1bdfa7604b')}, {
+ db.collection('user').findOneAndUpdate({_id: new ObjectID('5b4766be546c659293de94e5')}, {
      $set: { 
        name: 'mocha'  
      }, 
@@ -23,7 +23,6 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (error, client )=> {
  }).then((res)=> { 
      console.log('ddd', res ); 
  }); 
-
   //db.close();
 
 }); 

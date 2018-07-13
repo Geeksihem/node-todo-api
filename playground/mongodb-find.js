@@ -19,8 +19,9 @@ console.log('connected to mngo ');
 // }, (err)=>{
 //     console.log('unable to fetch data', err); 
 // })
-db.collection('Todos').find({text:'sihem'}).toArray().then(
+db.collection('user').find({email:'hcinesihem@gmail.com'}).toArray().then(
  (docs)=>{ 
+     console.log('ddddd'); 
 console.log(JSON.stringify(docs, undefined, 2)); 
 
  }, (err)=>{
