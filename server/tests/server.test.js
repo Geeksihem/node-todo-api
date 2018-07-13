@@ -73,6 +73,31 @@ describe('GET /todos', () => {
   });
 });
 
+describe('PATCH /todos/:id', ()=>{
+  it('should update to do ', (done)=>{
+// id , update text , set completed true ; 200  , text is changed , 
+var hexId = todos[0]._id.toHexString(); 
+var text= 'this should be new text'; 
+request(app)
+.patch(`/todos.${hexId}`)
+.send({ 
+  completed: true, 
+  text
+})
+.expect(200)
+.expect(()=>{ 
+  expect(res)
+})
+.end(done)
+}); 
+  it('hould completed ar when to  do is not completed ')
+
+//grab id of second todo item , update tex , set completed to flase , 200 , 
+
+
+} )
+
+
 describe('GET /todos/:id', () => {
   it('should return todo doc', (done) => {
     request(app)
